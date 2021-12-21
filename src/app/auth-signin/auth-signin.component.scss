@@ -1,0 +1,61 @@
+p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+}
+.rectangle {
+  width: 100%;
+  height: 100%;
+  padding: 1.1875rem 0 0;
+  background-color: #04a9f5;
+  overflow: hidden;
+}
+
+.vector-1 {
+  width: 25%;
+  height: 50%;
+  margin: 8.89% 17.33% 41.44% 0;
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  background-color: #1e3db2;
+  position: absolute;
+  top: -10%;
+  left: -15%;
+}
+
+.vector-2 {
+  width: 50%;
+  height: 80%;
+  margin: 6.92% 7.72% 19.5% 5.33%;
+  -webkit-filter: blur(110px);
+  filter: blur(110px);
+  background-color: #fff;
+  position: absolute;
+  top: -5%;
+  left: -10%;
+}
+
+.vector-3 {
+  width: 30%;
+  height: 60%;
+  -webkit-filter: blur(120px);
+  filter: blur(120px);
+  background-color: #1de9b6;
+  position: fixed;
+  bottom: -5%;
+  right: -20%;
+}
+
+.login-important {
+  color: #666;
+}
+
+.login-title {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.login-muted {
+  color: #999;
+}

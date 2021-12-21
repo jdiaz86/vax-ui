@@ -1,0 +1,60 @@
+<div class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+    <div class="row">
+      <h2>Iniciar Sesión</h2>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-12">
+        <label for="date">Usuario</label>
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control"
+          id="username"
+          aria-describedby="usernameHelp"
+          placeholder="Usuario"
+        />
+        <span
+          *ngIf="
+            !loginForm.get('username')?.valid &&
+            loginForm.get('username')?.touched
+          "
+          >Por favor, ingresa un usuario</span
+        >
+      </div>
+    </div>
+
+    <div class="row  mb-5">
+      <div class="col-md-12">
+        <label for="date">Password</label>
+        <input
+          type="text"
+          formControlName="password"
+          class="form-control"
+          id="password"
+          aria-describedby="passwordHelp"
+        />
+        <span
+          *ngIf="
+            !loginForm.get('password')?.valid &&
+            loginForm.get('password')?.touched
+          "
+          >Por favor, ingresa password</span
+        >
+      </div>
+    </div>
+
+    <div class="button-row mb-2 text-center">
+      <button
+        type="submit"
+        [disabled]="!loginForm.valid"
+        mat-flat-button
+        color="primary"
+        class="btn btn-primary"
+      >
+        <mat-icon>login</mat-icon> Iniciar Sesión
+      </button>
+    </div>
+  </form>
+</div>

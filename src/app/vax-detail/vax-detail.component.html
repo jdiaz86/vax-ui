@@ -1,0 +1,116 @@
+<div class="container">
+  <h2>Formulario de Empleado</h2>
+  <form [formGroup]="myForm" (onSubmit)="save()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dui">DUI</label>
+          <input type="text" formControlName="dui" class="form-control" id="dui" aria-describedby="duiHelp" placeholder="DUI" />
+          <small id="duiHelp" class="form-text text-muted">Ingresa valor númerico y único de 9 dígitos</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="last_name">Apellidos</label>
+          <input type="text" formControlName="last_name" class="form-control" id="last_name" aria-describedby="last_nameHelp" placeholder="Apellidos" />
+          <small id="last_nameHelp" class="form-text text-muted">Ingresa apellidos del empleado</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name">Nombres</label>
+          <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Nombres" />
+          <small id="nameHelp" class="form-text text-muted">Ingresa nombres del empleado</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Correo Electrónico" />
+          <small id="emailHelp" class="form-text text-muted">Ingresa correo electrónico válido</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMPLOYEES ONLY -->
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="date">Fecha de Nacimiento</label>
+          <input type="date" formControlName="date" class="form-control" id="date" aria-describedby="dateHelp" placeholder="Fecha de Nacimiento" />
+          <small id="dateHelp" class="form-text text-muted">Ingresa Fecha de Nacimiento válido</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="address">Dirección Domicilio</label>
+          <input type="text" formControlName="address" class="form-control" id="address" aria-describedby="addressHelp" placeholder="Dirección Domicilio" />
+          <small id="addressHelp" class="form-text text-muted">Ingresa Dirección Domicilio</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="phone">Teléfono Móvil</label>
+          <input type="text" formControlName="phone" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Teléfono Móvil" />
+          <small id="phoneHelp" class="form-text text-muted">Ingresa Teléfono Móvil</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="state">Estado Vacunación</label>
+          <select class="form-control" name="state" formControlName="state" id="state" aria-describedby="stateHelp">
+            <option value="">Ingresa Estado Vacunación</option>
+            <option value="VAX">Vacunado</option>
+            <option value="NOT_VAX">No Vacunado</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="vax">Vacuna</label>
+          <select class="form-control" name="vax" formControlName="vax" id="vax" aria-describedby="vaxHelp">
+            <option value="">Ingresa Vacuna</option>
+            <option value="SPUTNIK">Sputnik</option>
+            <option value="ASTRAZENECA">Astra Zeneca</option>
+            <option value="PFIZER">Pfizer</option>
+            <option value="JJ">Jonhson & Jonhson</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="date_vax">Fecha de Vacunación</label>
+          <input type="date" formControlName="date_vax" class="form-control" id="date_vax" aria-describedby="date_vaxHelp" placeholder="Fecha de Vacunación" />
+          <small id="date_vaxHelp" class="form-text text-muted">Ingresa Fecha de Vacunación válido</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="dosis">Número de Dosis</label>
+          <input type="number" formControlName="dosis" class="form-control" id="dosis" aria-describedby="dosisHelp" placeholder="Número de Dosis" />
+          <small id="dosisHelp" class="form-text text-muted">Ingresa Número de Dosis</small>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ENDS EMPLOYEES ONLY -->
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">Guardar/Editar</button>
+    </div>
+  </form>
+</div>
